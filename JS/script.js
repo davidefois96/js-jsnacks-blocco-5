@@ -111,22 +111,22 @@ console.log(cont);
 //snack 2
 
 
-const short =[];
+
 const long =[];
+const short =[];
 
-zucchine.forEach(element => {
+zucchine.filter(zucchina=>{
 
-  if (element.lunghezza<=15) {
+  if (zucchina.lunghezza<=15) {
 
-    short.push(element)
-    
+    short.push(zucchina)
+        
   } else {
-
-    long.push(element)
     
+    long.push(zucchina)
   }
-  
-});
+})
+
 
 console.log(short);
 console.log(long);
