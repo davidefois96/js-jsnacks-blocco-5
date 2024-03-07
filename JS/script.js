@@ -185,11 +185,10 @@ function included(myArray,firstNumber,secondNumber,newArray) {
     newArray.push(element)
 
   });
+
+  return newArray;
  
 }
 
-
-included(arraySnack,5,8,includedArray);
-
-console.log(includedArray);
+console.log(included(arraySnack,5,8,includedArray));    
 
