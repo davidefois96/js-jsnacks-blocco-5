@@ -172,18 +172,24 @@ console.log(mix);
 
 
 const arraySnack= [1,2,3,4,5,6,7,8,9,10];
+const includedArray=[];
 
-function included(myArray,firstNumber,secondNumber) {
+function included(myArray,firstNumber,secondNumber,newArray) {
 
-myArray.splice(0,firstNumber);
+  myArray.splice(0,firstNumber);
 
-myArray.splice(secondNumber-firstNumber-1);
+  myArray.splice(secondNumber-firstNumber-1);
 
-return myArray;
+  myArray.forEach(element => {
+
+    newArray.push(element)
+
+  });
  
 }
 
 
-;
-console.log(included(arraySnack,5,8));
+included(arraySnack,5,8,includedArray);
+
+console.log(includedArray);
 
