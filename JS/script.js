@@ -110,26 +110,12 @@ console.log(cont);
 
 //snack 2
 
+const long = zucchine.filter(zucchina=> zucchina.lunghezza<=15);
+const short = zucchine.filter(zucchina=> zucchina.lunghezza>15);
 
 
-const long =[];
-const short =[];
-
-zucchine.filter(zucchina=>{
-
-  if (zucchina.lunghezza<=15) {
-
-    short.push(zucchina)
-        
-  } else {
-    
-    long.push(zucchina)
-  }
-})
-
-
-console.log(short);
 console.log(long);
+console.log(short);
 
 //snack3
 
@@ -176,16 +162,12 @@ const includedArray=[];
 
 function included(myArray,firstNumber,secondNumber,newArray) {
 
-  myArray.splice(0,firstNumber);
-
-  myArray.splice(secondNumber-firstNumber-1);
-
-  myArray.forEach(element => {
-
-    newArray.push(element)
-
-  });
-
+  for (let index = firstNumber; index < secondNumber-1; index++) {
+    
+    newArray.push(myArray[index]);
+    
+  }
+  
   return newArray;
  
 }
